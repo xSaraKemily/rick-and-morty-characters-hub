@@ -1,0 +1,44 @@
+
+<dialog class="modal" data-theme="dark" #modal>
+  @if (character) {
+    <div class="modal-box max-w-xl">
+      <h3 class="text-lg font-bold">{{ character.name }}</h3>
+
+      <div class="flex gap-3 py-4">
+        <img [src]="character.image" class="w-40">
+        
+        <div>
+          <p>Status: 
+            <span class="text-gray-400">{{ statusTranslation }}</span>
+          </p>
+
+          <p>Localização: 
+            <span class="text-gray-400">{{ character.location_name }}</span>
+          </p>
+
+          <p>Origem: 
+            <span class="text-gray-400">{{ character.origin }}</span>
+          </p>
+
+          <p>Episódios: 
+            <span class="text-gray-400">{{ character.total_episodes }}</span>
+          </p>
+
+          <p>Gênero: 
+            <span class="text-gray-400">{{ character.gender }}</span>
+          </p>
+
+          <p>Espécie: 
+            <span class="text-gray-400">{{ character.specie }}</span>
+          </p>
+        </div>
+      </div>
+        
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn bg-gray-900">Fechar</button>
+        </form>
+      </div>
+    </div>
+  }
+</dialog>

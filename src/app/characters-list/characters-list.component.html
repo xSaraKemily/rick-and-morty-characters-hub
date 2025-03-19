@@ -1,0 +1,23 @@
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    @for (character of characters(); track character.id) {
+        <div class="bg-gray-800 p-4 rounded-lg text-center cursor-pointer" (click)="openDetails(character)" title="Ver Detalhes">
+            <img [src]="character.image" class="w-32 h-32 mx-auto rounded-full mb-2">
+
+            <h2 class="text-lg font-bold">{{ character.name }}</h2>
+
+            <p class="text-sm">Status: 
+                <span class="text-gray-400">{{ getStatusTranslation(character.status) }}</span>
+            </p>
+
+            <p class="text-sm">Localização:
+                <span class="text-gray-400">{{ character.location_name }}</span>
+            </p>
+
+            <p class="text-sm">Episódios: 
+                <span class="text-gray-400">{{ character.total_episodes }}</span>
+            </p>
+        </div>
+    }
+</div>
+
+<character-details-modal />
