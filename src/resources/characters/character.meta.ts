@@ -18,3 +18,22 @@ export const CharacterStatusMeta = [
         translation: 'Desconhecido'
     }
 ];
+
+export const CharacterGenderMeta = [
+    {
+        gender: 'female',
+        translation: 'Feminino'
+    },
+    {
+        gender: 'male',
+        translation: 'Masculino'
+    },
+    {
+        stagendertus: 'genderless',
+        translation: 'Sem gênero'
+    },
+    {
+        gender: 'unknown',
+        translation: 'Desconhecido'
+    }
+];
