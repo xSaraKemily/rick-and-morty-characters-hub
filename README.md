@@ -1,4 +1,4 @@
-# 👽 Rick & Morty Characters Hub
+# <img width="48" height="48" src="https://img.icons8.com/color/48/rick-sanchez.png" alt="rick-sanchez"/> Rick & Morty Characters Hub
 
 ## 📝 Proposta  
 
