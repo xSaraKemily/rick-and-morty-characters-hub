@@ -14,21 +14,25 @@
         <button class="p-2 bg-blue-600 rounded" (click)="loadCharacters()">Buscar</button>
     </div>
 
-    <p class="text-gray-400">Total de personagens: {{ queryInfo?.count }}</p>
+    @if (queryInfo) {
+        <p class="text-gray-400">Total de personagens: {{ queryInfo?.count }}</p>
+    }
  </div>
 
  @if (characters) {
     <app-characters-list [characters]="characters"/>
+
+    <div class="join">
+        @if (currentPage > 1) {
+            <button class="join-item btn" (click)="changePage()">«</button>   
+        }
+    
+        <button class="join-item btn">Página {{currentPage}}</button>
+    
+        @if (currentPage < queryInfo.pages) {
+            <button class="join-item btn" (click)="changePage(true)">»</button>
+        }
+    </div>
+ } @else {
+   <span class="text-2xl text-gray-500 mt-20">Não existem personagens para os filtros selecionados</span>
  }
- 
- <div class="join">
-    @if (currentPage > 1) {
-        <button class="join-item btn" (click)="changePage()">«</button>   
-    }
-
-    <button class="join-item btn">Página {{currentPage}}</button>
-
-    @if (currentPage < queryInfo.pages) {
-        <button class="join-item btn" (click)="changePage(true)">»</button>
-    }
-</div>

@@ -32,8 +32,8 @@ export class AppComponent implements OnInit{
     this.charactersService.getByPage(isNext ? this.queryInfo.next : this.queryInfo.prev)
     .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: (data) => this.bindQueryResult(data, isNext ? this.currentPage + 1 : this.currentPage - 1),
-        error: (error) => console.error(error)
+        next: (data) => this.bindRequestResult(data, isNext ? this.currentPage + 1 : this.currentPage - 1),
+        error: (error) => this.handleRequestError(error)
       });
   }
 
@@ -41,19 +41,19 @@ export class AppComponent implements OnInit{
     this.charactersService.getCharacters(this.nameInput?.nativeElement?.value, this.statusSelect?.nativeElement?.value)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: (data) => this.bindQueryResult(data, 1),
-        error: (error) => console.error(error)
+        next: (data) => this.bindRequestResult(data, 1),
+        error: (error) => this.handleRequestError(error)
       });
   }
 
-  private bindQueryResult(data: any, currentPage: number): void {
-    this.characters = this.formatCharacters(data.results);
-    this.queryInfo = data.info;
+  private bindRequestResult(data: any, currentPage: number): void {
+    this.characters = this.formatCharacters(data?.results);
+    this.queryInfo = data?.info;
     this.currentPage = currentPage;
   }
 
   private formatCharacters(data: any): CharacterInterface[] {
-    return data.map((item: any) => {
+    return data?.map((item: any) => {
        return {
          id: item.id,
          total_episodes: item.episode.length,
@@ -67,5 +67,11 @@ export class AppComponent implements OnInit{
        } as CharacterInterface;
     });
    }
- 
+
+
+   private handleRequestError(error: any): void {
+      if (error.status === 404) {
+        this.bindRequestResult([], 1);
+      }
+   }
 }
