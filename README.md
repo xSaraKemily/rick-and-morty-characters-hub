@@ -1,6 +1,6 @@
 # <img width="48" height="48" src="https://img.icons8.com/color/48/rick-sanchez.png" alt="rick-sanchez"/> Rick & Morty Characters Hub
 
-### Accessar o Projeto em produção: https://xsarakemily.github.io/rick-and-morty-characters-hub/
+### Accessar o projeto em produção: https://xsarakemily.github.io/rick-and-morty-characters-hub/
 
 ## 📝 Proposta  
 
