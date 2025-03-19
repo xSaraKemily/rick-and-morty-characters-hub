@@ -41,13 +41,13 @@ As responsabilidades foram divididas em arquivos distintos, como:
 
 # 🚀 Setup do Projeto 
 
+
 Clonar o Projeto
 ```sh
 git clone https://github.com/xSaraKemily/rick-and-morty-characters-hub.git
 ```
 
-Instalar dependencias
----
+Instalar dependencias (rodar no terminal dentro do diretorio do projeto)
 
 ```sh
 npm install
