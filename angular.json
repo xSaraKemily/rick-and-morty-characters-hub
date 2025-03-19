@@ -51,7 +51,8 @@
                 }
               ],
               "outputHashing": "all",
-              "sourceMap": false
+              "sourceMap": false,
+              "baseHref": "/rick-and-morty-characters-hub/"
             },
             "development": {
               "optimization": false,
