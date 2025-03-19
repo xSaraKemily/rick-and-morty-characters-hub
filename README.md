@@ -7,10 +7,12 @@
 Este projeto é uma página de pesquisa de personagens da série de animação Rick and Morty
 
 ## 🔹 Features Principais  
-- **Pesquisa de perfonagens** por nome.  
-- **Pesquisa de perfonagens** por status.  
+- **Listagem de todos os personagens**.
+- **Pesquisa de personagens** por nome.  
+- **Pesquisa de personagens** por status.  
 - **Visualização do total de personagens** de acordo com os filtros.  
-- **Visualização de detalhes** de cada personagem.  
+- **Visualização de detalhes** de cada personagem.
+- **Imagem, nome, status total de episodios, localização, gênero, origem e espécie** de cada personagem.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -21,7 +23,7 @@ Este projeto é uma página de pesquisa de personagens da série de animação R
 
 # Tecnicas utilizadas no desenvolvimento
 
-1. Arquitetura Modular (Feature-Based Architecture)
+### Arquitetura Modular (Feature-Based Architecture)
 Os arquivos foram organizados por funcionalidade, em vez de apenas separá-los por tipo (componentes, serviços, modelos). Isso é ótimo para escalabilidade e manutenção.
 
 Exemplos:
@@ -29,7 +31,7 @@ Exemplos:
 - character-details-modal → Responsável pelos detalhes dos personagens.
 - characters → Contém modelos, serviços e enums específicos de personagens.
 
-2. Separação de Preocupações (Separation of Concerns)
+### Separação de Preocupações (Separation of Concerns)
 As responsabilidades foram divididas em arquivos distintos, como:
 
 - Modelos (character.model.ts) → Define a estrutura dos dados.
@@ -41,7 +43,7 @@ As responsabilidades foram divididas em arquivos distintos, como:
 
 Clonar o Projeto
 ```sh
-git clone 
+git clone https://github.com/xSaraKemily/rick-and-morty-characters-hub.git
 ```
 
 Instalar dependencias
