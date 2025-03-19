@@ -3,10 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Rick & Morty Characters Hub</title>
-  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="icons8-rick-e-morty.svg">
 </head>
+
+<script>
+  const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+  document.write(`<base href="${isLocal ? '/' : '/rick-and-morty-characters-hub/'}" />`);
+</script>
 
 <body class="bg-gray-900 text-white h-screen">
   <app-root></app-root>
