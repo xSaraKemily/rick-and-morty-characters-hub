@@ -46,11 +46,38 @@ Clonar o Projeto
 ```sh
 git clone https://github.com/xSaraKemily/rick-and-morty-characters-hub.git
 ```
+Entrar no diretório do projeto
 
-Instalar dependencias (rodar no terminal dentro do diretorio do projeto)
+```sh
+cd rick-and-morty-characters-hub
+```
+
+Instalar dependencias
 
 ```sh
 npm install
 ```
 
+Iniciar servidor local
+
+```sh
+npm run start
+```
+
+ou 
+
+```sh
+ng serve
+```
+
 ## Accessar o Projeto: http://127.0.0.1:4200
+
+---
+
+![image](https://github.com/user-attachments/assets/2251c012-8d45-42ea-89bf-514fec81d78d)
+
+---
+
+![image](https://github.com/user-attachments/assets/1c98b1f3-15c5-4692-b530-51d68aa6437f)
+
+
