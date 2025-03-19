@@ -3,9 +3,9 @@
     <h1 class="text-3xl font-bold text-center mb-6">Rick & Morty Characters Hub</h1>
   
     <div class="flex gap-4 justify-center mb-6">
-        <input type="text" placeholder="Pesquisar por nome..." class="p-2 rounded bg-gray-800 text-white" #nameInput>
-  
-        <select class="p-2 rounded bg-gray-800 text-white" #statusSelect>
+        <input class="p-2 rounded bg-gray-800 text-white" type="text" placeholder="Pesquisar por nome..." (keyup.enter)="loadCharacters()" #nameInput>
+
+        <select class="p-2 rounded bg-gray-800 text-white"  (change)="loadCharacters()" #statusSelect>
            @for (statusMeta of characterStatusMeta; track $index) {
             <option [value]="statusMeta.status">{{ statusMeta.translation }}</option>
            }
@@ -13,7 +13,7 @@
   
         <button class="p-2 bg-blue-600 rounded" (click)="loadCharacters()">Buscar</button>
     </div>
-
+    
     @if (queryInfo) {
         <p class="text-gray-400">Total de personagens: {{ queryInfo?.count }}</p>
     }
