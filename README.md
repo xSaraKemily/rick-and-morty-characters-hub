@@ -4,7 +4,7 @@
 
 Este projeto é uma página de pesquisa de personagens da série de animação Rick and Morty
 
-## 🔹 Main Features  
+## 🔹 Features Principais  
 - **Pesquisa de perfonagens** por nome.  
 - **Pesquisa de perfonagens** por status.  
 - **Visualização do total de personagens** de acordo com os filtros.  
