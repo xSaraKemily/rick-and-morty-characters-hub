@@ -1,5 +1,7 @@
 # <img width="48" height="48" src="https://img.icons8.com/color/48/rick-sanchez.png" alt="rick-sanchez"/> Rick & Morty Characters Hub
 
+### Accessar o Projeto em produção: 
+
 ## 📝 Proposta  
 
 Este projeto é uma página de pesquisa de personagens da série de animação Rick and Morty
@@ -16,8 +18,6 @@ Este projeto é uma página de pesquisa de personagens da série de animação R
 - Typescript
 - TailwindCSS
 - DaisyUI
-
-## Accessar o Projeto em produção: 
 
 # Tecnicas utilizadas no desenvolvimento
 
